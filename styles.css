@@ -3,19 +3,26 @@ body {
     margin: 0;
     padding: 0;
 }
+nav .container-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
 
 .navbar {
     height: 101px;
     background-color: #f2f2f2;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
-    padding-left: 10rem;
-    padding-right: 10rem;
+    padding: 24px 42px 24px 42px;
 }
 
 @media (max-width: 991px) {
     .navbar {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 24px 20px 24px 20px;
+        height: 75px;
+        justify-content: center;
     }
 
     .mega-menu {
@@ -25,10 +32,51 @@ body {
     .navbar-collapse {
         display: none;
     }
+
+    .navbar-brand img {
+        height: 32.81px!important;
+        width: 146px!important;
+    }
+    .navbar-brand {
+        padding-top: 0!important;
+        padding-bottom: 0!important;
+    }
+    nav .container-nav {
+        width:320px;
+        height: 32.81px;
+        margin: 0;
+        gap: 150px;
+    }
+    .navbar-toggler {
+        padding: 0!important;
+    }
+}
+@media (min-width: 992px) {
+
+    .hide-d{
+        display:none
+    }
+ 
+
 }
 
 .navbar-brand img {
-    height: 50px;
+    height: 40px;
+    width: 178px;
+
+}
+
+.navbar-nav{
+    gap:32px
+}
+
+.navbar-brand {
+    margin-right: 0!important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 0!important;
+    padding-left: 0!important;
 }
 
 .nav-link {
@@ -36,12 +84,12 @@ body {
     font-size: 16px;
     color: black !important;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 0 15px;
+    margin: 0 0px;
     padding: 10px; /* Add padding to increase hover area */
 }
 
 .navbar-toggler img {
-    height: 30px;
+    height: 24px;
 }
 
 .navbar-toggler {
@@ -65,13 +113,14 @@ body {
 
 .mega-menu {
     display: none;
-    position: absolute;
+    position: fixed;
+    z-index: 100;
     top: 101px;
     width: 100%;
     height: 465px;
     background-color: white;
     box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.15);
-    padding: 82px 186px;
+    padding: 82px 186px 82px 186px;
    
     justify-content: space-between;
 }
@@ -80,6 +129,7 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 1200px;
 }
 
 .mega-menu-left ul {
@@ -104,6 +154,7 @@ body {
 .card-content {
     display: flex;
     justify-content: space-between;
+    gap:22px;
     align-items: center;
     width: 100%;
 }
@@ -115,8 +166,8 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
-    padding: 24px;
+    width: 641px;
+    padding: 24px 52.5px;
 }
 
 .mega-menu-right .card-body {
@@ -124,14 +175,17 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    width: 60%;
-    margin-left: 24px;
+    width: 100%;
+    max-width: 323px;
+    padding: 0;
+    
 }
 
 .mega-menu-right .card-body h5 {
     font-family: 'Lora', serif;
     font-weight: 600;
     font-size: 24px;
+    line-height: 28.8px;    ;
     color: black;
     margin: 0;
 }
@@ -139,9 +193,9 @@ body {
 .mega-menu-right .card-body p {
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    line-height: 150%;
+    line-height: 28.8px;
     color: black;
-    margin: 10px 0px;
+    margin: 8px 0px;
     margin-bottom: 25px;
 }
 
@@ -160,8 +214,7 @@ body {
     height: 253px;
     width: 191px;
     border-radius: 20px;
-    margin-left: 24px;
-    margin-right: 24px;
+   
 }
 
 .mobile-menu {
@@ -186,7 +239,8 @@ body {
 .mobile-menu-header {
     display: flex;
     justify-content: flex-end;
-    padding: 1rem;
+    padding-top: 24px;
+    padding-right: 22px;
 }
 
 .close-btn {
@@ -207,27 +261,35 @@ body {
     align-items: center;
     margin-top: 0px;
     text-align: center;
+    width: 240px;
+    height: 426px;
+    position: relative;
+    top: 6px;
+    left: 68px;
 }
 
 .mobile-menu-content img {
-    height: 50px;
+    height: 40px;
+    width: 178px;
     margin-bottom: 48px;
 }
 
 .mobile-menu-content ul {
     list-style: none;
     padding: 0;
+    width: 98px;
 }
 
 .mobile-menu-content li {
-    margin-bottom: 46px;
+    margin-bottom: 32px;
     text-align: center;
 }
 
 .mobile-menu-content a {
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 16px;
+    line-height: 24px;
     color: white;
     text-decoration: none;
 }
@@ -239,7 +301,15 @@ body {
     font-weight: bold;
     font-size: 16px;
     border-radius: 4px;
+    border-radius: 4px;
     padding: 24px 56px;
+    font-weight: 700;
+    width: 240px;
+    height: 72px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    
 }
 
 @keyframes slideIn {
@@ -267,32 +337,43 @@ body {
     background-size: cover;
     background-position: center;
     width: 100%;
-    padding: 0px 8rem; /* Ajustar padding en desktop */
-    margin-top: 101px; /* Ajustar margen superior para empezar debajo del header */
+    padding: 95px 120px 95px 120px;
+    margin-top: 101px;  
     text-align: left;
     color: white;
-    height: 100vh; /* Altura de la pantalla completa */
+    height: 674px; 
     display: flex;
-    justify-content: flex-start; /* Alinear contenido a la izquierda */
+    justify-content: flex-start;
     align-items: center;
+}
+.section-1-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .section-1-content {
-    width: 63%; /* Ajustar el ancho del contenedor */
+    
+    width: 848px;
+    justify-content: space-between;
+    display: block;
+    height: 346px;
 }
 
 .section-1-title {
     font-family: 'Lora', serif;
-    font-weight: 600; /* Ajustar el font-weight en desktop */
+    font-weight: 600; 
     font-size: 57px;
     margin: 0;
+    line-height: 68.4px;
 }
 
 .section-1-text {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 500; /* Ajustar el font-weight en desktop */
+    font-weight: 600; 
     font-size: 20px;
     margin-top: 20px;
+    line-height: 30px;
 }
 
 .btn-partner-section {
@@ -309,32 +390,41 @@ body {
 
 @media (max-width: 991px) {
     .section-1 {
-        padding: 0px 2rem; /* Ajustar padding para mobile */
-        text-align: left; /* Alinear contenido a la izquierda en mobile */
-        height: 505px; /* Ajustar la altura para móvil */
-        background-image: url('https://thrillx.tecolotelocations.com.mx/images/s1-background-m.png'); /* Nueva imagen de fondo para móvil */
+        padding:80px 32px 80px 32px; 
+        text-align: left; 
+        margin-top: 75px;
+        height: auto;
+        background-image: url('https://thrillx.tecolotelocations.com.mx/images/s1-background-m.png'); 
     }
 
     .section-1-content {
-        width: 95%; /* Ajustar el ancho del contenedor en móvil */
-        margin-top: -30px; /* Mover el contenido 30px hacia arriba en móvil */
+        width: 100%; 
+        height: auto;
     }
 
     .section-1-title {
         font-size: 33px;
-        font-family: 'Lora', serif; /* Cambiar la fuente a Lora en móvil */
-        font-weight: 400; /* Ajustar el font-weight en móvil */
+        font-family: 'Lora', serif; 
+        font-weight: 600;
+        line-height: 39.6px;
+        height: 120px;
     }
 
     .section-1-text {
         font-size: 14px;
-        font-family: 'Open Sans', sans-serif; /* Asegurar que se use Open Sans en móvil */
-        font-weight: 300; /* Ajustar el font-weight a 300 en móvil */
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        line-height: 21px;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 
     .btn-partner-section {
         padding: 16px 48px;
         font-size: 14px;
+        line-height: 21px;
+        font-weight: 700;
+        margin-top: 1rem;
     }
 }
 
@@ -342,7 +432,7 @@ body {
 
 .section-2 {
     background-color: #f2f2f2;
-    padding: 48px 0;
+    padding: 48px 103px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -350,11 +440,11 @@ body {
 
 .section-2-content {
     display: flex;
-    justify-content: center; /* Centra los elementos horizontalmente */
+    justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Ajustar según sea necesario */
-    gap: 88px; /* Espacio entre los elementos en desktop */
+    max-width: 1200px;
+    gap: 88px;
 }
 
 .stat {
@@ -363,40 +453,43 @@ body {
 
 .stat-number {
     font-family: 'Lora', serif;
-    font-weight: 600; /* SemiBold */
+    font-weight: 600; 
     font-size: 48px;
     color: black;
     margin-bottom: 8px;
+    line-height: 57.6px;
 }
 
 .stat-text {
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 21px;
     font-size: 14px;
-    color: black;
+    color: #363328;
 }
 
 @media (max-width: 991px) {
     .section-2 {
-        padding: 48px 0;
+        padding: 48px 123px 48px 123px;
     }
 
     .section-2-content {
         flex-direction: column;
         align-items: center;
-        gap: 40px; /* Espacio entre los elementos en móvil */
+        gap: 40px; 
     }
-
     .stat {
         text-align: center;
     }
 
     .stat-number {
-        font-size: 33px; /* Tamaño de fuente para números en móvil */
+        font-size: 33px; 
+        line-height: 39.6px;
     }
 
     .stat-text {
-        font-size: 14px; /* Tamaño de fuente para texto en móvil */
+        font-size: 14px; 
+        line-height: 21px;
     }
 }
 
@@ -405,72 +498,79 @@ body {
 .section-3 {
     background-color: #F3F0FD;
     display: flex;
-    justify-content: center; /* Centra los elementos en el eje horizontal */
+    justify-content: center;
     align-items: center;
-    padding: 48px 0;
+    padding:112px 120px 112px 120px;
 }
 
 .section-3-content {
     display: flex;
-    justify-content: center; /* Centra los elementos en el eje horizontal */
+    justify-content: center; 
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Ajustar según sea necesario */
-    gap: 40px; /* Espacio entre los textos */
+    max-width: 1200px; 
+    gap: 40px; 
 }
 
 .section-3-left, .section-3-right {
-    flex: 1; /* Asegura que ambos textos ocupen la misma anchura */
+    flex: 1; 
 }
 
 .section-3-left {
     font-family: 'Lora', serif;
-    font-weight: 600; /* SemiBold */
+    font-weight: 600;
     font-size: 33px;
-    line-height: 1.2em; /* Line height para el texto izquierdo */
+    line-height: 39.6px; 
     color: black;
 }
 
 .section-3-right {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400; /* Regular */
+    font-weight: 400;
     font-size: 18px;
-    line-height: 1.5em; /* Line height para el texto derecho */
+    line-height: 27px; 
     color: black;
+    max-width: 546px;
 }
 
 @media (max-width: 991px) {
     .section-3 {
-        padding: 48px 2rem; /* Padding horizontal en móvil */
+        padding: 48px 32px 48px 32px;
     }
 
     .section-3-content {
-        flex-direction: column; /* Apilar verticalmente */
-        align-items: flex-start; /* Alineación a la izquierda */
-        gap: 16px; /* Espacio entre los textos en móvil */
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 16px; 
     }
 
     .section-3-left {
-        font-size: 23px; /* Tamaño de fuente para texto izquierdo en móvil */
+        font-size: 23px; 
+        line-height: 27.6px;
     }
+    
 
     .section-3-right {
-        font-size: 14px; /* Tamaño de fuente para texto derecho en móvil */
+        font-size: 14px; 
+        line-height: 21px;
+        
     }
 }
 
 /* section 4 */
 
-/* Estilos generales de la sección 4 */
 .section-4 {
     background-color: #ffffff;
-    padding: 112px 0;
+    padding: 112px 120px 0px 120px;
     display: flex;
     justify-content: center;
     position: relative;
 }
-
-/* Contenido de la sección 4 */
+.section-4-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
 .section-4-content {
     max-width: 1200px;
     width: 100%;
@@ -478,30 +578,29 @@ body {
     position: relative;
 }
 
-/* Lado izquierdo - Contenido */
 .section-4-left {
-    max-width: 50%;
+    max-width: 558px;
+    width: 100%;
     position: relative;
     z-index: 1;
     opacity: 0;
-    transition: opacity 1.5s ease; /* Transición de opacidad ajustada */
-    margin-bottom: 140px; /* Añadir más espacio entre los elementos */
+    transition: opacity .8s ease; 
+    height: 70vh;
+    padding: 59px 0;
 }
 
-/* Lado derecho - Imagen fija */
 .section-4-right {
     position: fixed;
-    top: 30%; /* Ajustado para aparecer más abajo */
+    top: 30%; 
     right: 7%;
     width: 542px;
     height: 50vh;
     background-size: cover;
     background-position: center;
     opacity: 0;
-    transition: opacity .5s ease-in-out; /* Transición de opacidad más marcada */
+    transition: opacity .5s ease-in-out; /
 }
 
-/* Estilos para los títulos y el texto */
 .section-4-title {
     font-family: 'Lora', serif;
     font-weight: 600;
@@ -527,6 +626,7 @@ body {
     font-weight: 700;
     font-size: 16px;
     border: none;
+    position: absolute;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
@@ -535,24 +635,22 @@ body {
     background-color: #0e074b;
 }
 
-/* Bullets de la sección */
 .swiper-pagination {
     
-    position: fixed !important;
-    top: 34% !important;
-    right: 5%!important;
+    right: 123px!important;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 23px;
     opacity: 0;
-    transition: opacity 1.5s ease-in-out; /* Transición de opacidad más marcada */
+    transition: opacity 1.5s ease-in-out;
 }
 
 .swiper-pagination-bullet {
     width: 3px !important;
-    height: 9.5vh !important;
+    height: 77px !important;
     border-radius: 0!important;
     transition: background .5s ease;
+    background: #D9D9D9;
 }
 
 .swiper-pagination-bullet-active {
@@ -560,15 +658,23 @@ body {
 }
 
 @media (max-width: 768px) {
+    .section-4 {
+        background-color: #ffffff;
+        padding: 48px 0px 48px 0px;
+    }
+
     .section-4-left {
         max-width: 100%;
         padding-right: 0;
-        text-align: left; /* Alineación a la izquierda en móvil */
+        text-align: left; 
+        top: 181px;
+        height: 61vh;
     }
 
     .section-4-content {
         padding: 0 16px;
-        align-items: flex-start; /* Alineación a la izquierda en móvil */
+        align-items: flex-start; 
+        height: 1830px;/*1728px;*/
     }
 
     .section-4-button {
@@ -577,19 +683,20 @@ body {
     }
 
     .section-4-title {
-        font-size: 27px; /* Tamaño del título en móvil */
-        font-weight: 600; /* Semibold */
+        font-size: 27px; 
+        font-weight: 600;
     }
 
     .section-4-text {
-        font-size: 14px; /* Tamaño del texto en móvil */
-        font-weight: 400; /* Regular */
+        font-size: 14px; 
+        font-weight: 400;
     }
 
     .swiper-pagination {
-        right: 10px;
+        left: 344px !important;
         bottom: 10px;
         transform: none;
+        gap: 10px;
     }
     .section-4-right {
         position: fixed;
@@ -605,18 +712,23 @@ body {
 
      .swiper-pagination-bullet {
             width: 3px !important;
-            height: 3.5vh !important;
+            height: 37px !important;
             border-radius: 0!important;
+            gap: 10px;
             transition: background .5s ease;
+            background: white!important;
+            opacity: 0.6;
+
         }
         .swiper-pagination-bullet-active {
             background: white!important;
+            opacity: 1!important;
         }
-
+/*
         .swiper-pagination {
-            top:20%!important;
+            top:2%!important;
         }
-
+*/
             
 
 }
@@ -625,35 +737,38 @@ body {
 
 .section-5 {
     background-color: #F3F0FD;
-    padding: 80px 0%;
+    padding: 80px 0px 80px 0px;
     text-align: center;
     position: relative;
     z-index: 12;
 }
-
+.section-5-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
 .section-5-title {
     font-family: 'Lora', serif;
     font-weight: 600;
     font-size: 48px;
     color: #000000;
-    width: 60%;
+    width: 846px;
     margin: 0 auto 64px;
+    line-height: 57.6px;
 }
 
-/* Contenedor de las cards */
 .section-5-cards {
     display: flex;
     justify-content: center;
     gap: 50px;
 }
 
-/* Estilos de cada card */
 .section-5-card {
-    width: 24.26%;
+    width: 335px;
     background-color: #ffffff;
     border-radius: 4px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
-    padding: 53px 35px;
+    padding: 53px 32px;
     text-align: center;
 }
 
@@ -669,6 +784,7 @@ body {
     font-size: 23px;
     color: #000000;
     margin-bottom: 24px;
+    line-height: 27.6px;
 }
 
 .section-5-card-list {
@@ -685,11 +801,10 @@ body {
 .section-5-card-list li {
     background: url('https://thrillx.tecolotelocations.com.mx/images/Check.png') no-repeat left center;
     background-size: 24px 24px;
-    padding-left: 36px;
-    margin-bottom: 12px;
+    padding-left: 40px;
+    margin-bottom: 8px;
 }
 
-/* Estilos del botón */
 .section-5-button {
     margin-top: 48px;
     padding: 26px 56px;
@@ -707,12 +822,18 @@ body {
 .section-5-button:hover {
     background-color: #0e074b;
 }
-
-/* Estilos responsivos para móvil */
+@media (in-width: 769px) {
+    .section-5-card{
+        width: 323px !important;
+    }
+}
 @media (max-width: 768px) {
     .section-5-title {
         font-size: 33px;
-        width: 80%;
+        font-weight: 600;
+        line-height: 39.6px;
+        width: 100%;
+        margin-bottom:40px;
     }
 
     .section-5-cards {
@@ -721,43 +842,64 @@ body {
     }
 
     .section-5-card {
-        width: 100%;
-        width: 83%;
-        left: 8.5%;
+        width: 311px!important;
         position: relative;
+        padding: 40px 45px 40px 45px;
     }
 
     .section-5-card-title {
         font-size: 20px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        width: 218px;
+        line-height: 30px;
+    }
+    .section-5-card-list li {
+        background-size: 25px 25px;
+        padding-left: 33px;
+
     }
 
     .section-5-card-list {
         font-size: 16px;
+        width: 236px;
+        line-height: 24px;
     }
 
     .section-5-button {
         padding: 16px 48px;
         font-size: 14px;
+         margin-top: 32px;
     }
+    .section-5-card-img {
+        width: 60px;
+        height: 60px;
+    }    
     .section-5 {
-        padding-bottom: 48px;
+        padding: 48px 32px 48px 32px;
+        top: -102px;
     }
 }
 
 .section-6 {
     background-color: #fdfdfd;
-    padding: 80px 8.33%;
+    padding: 80px 120px 80px 120px;
     background-image: url('https://thrillx.tecolotelocations.com.mx/images/s-6-bg.png');
-    background-position: 110% 50%;
+    background-position: 112% 60%;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: 687px 733px;
 }
-
+.section-6-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
 .section-6-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 92px;
+    row-gap: 80px;
 }
 
 .section-6-item {
@@ -768,24 +910,33 @@ body {
 .section-6-img {
     width: 100%;
     max-width: 574px;
-    height: auto;
-}
+    height: 626px;
+};
+
 
 .section-6-text {
     text-align: left;
+    max-width: 534px;
+    width: 100%;
 }
 
 .section-6-subtitle {
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 700;
+    line-height: 21px;
     font-size: 14px;
     color: #170864;
     margin-bottom: 8px;
 }
 
+.s6bl{
+    margin-bottom: 24px!important;
+}
+
 .section-6-title {
     font-family: 'Lora', serif;
-    font-weight: bold;
+    font-weight: 600;
+    line-height: 48px;
     font-size: 40px;
     color: #000000;
     margin-bottom: 16px;
@@ -793,8 +944,9 @@ body {
 
 .section-6-description {
     font-family: 'Open Sans', sans-serif;
-    font-weight: regular;
+    font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
     margin-bottom: 32px;
 }
 
@@ -813,6 +965,7 @@ body {
 
 .accordion {
     margin-bottom: 32px;
+    width: 534px;
 }
 
 .accordion-item {
@@ -824,7 +977,8 @@ body {
     justify-content: space-between;
     align-items: center;
     font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
+    font-weight: 600;
+    line-height: 27px;
     font-size: 18px;
     cursor: pointer;
 }
@@ -838,6 +992,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: regular;
     font-size: 16px;
+    line-height: 24px;
     display: none;
     margin-top: 8px;
 }
@@ -850,22 +1005,39 @@ body {
     transform: rotate(180deg);
 }
 
-/* Responsive styles for mobile */
 @media (max-width: 768px) {
+    
+
+    .pb24{
+       padding-bottom: 24px;
+        
+    }
+    .o3{
+        order: 3; 
+    }
+    .o4{
+        order: 4;
+    }
     .section-6 {
-        padding: 48px 8.33%;
-        background-position: 114% 27%;
-        background-size: 50% auto;
+        padding: 48px 32px 48px 32px;
+        background-position: 118% 45%;
+        background-size: 196.43px 184px;
     }
 
     .section-6-content {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
-        gap: 48px;
+        gap: 24px;
     }
 
     .section-6-item:nth-child(4) {
         order: 1;
+    }
+
+    .section-6-img {
+        max-width: 311px;
+        height: 246px;
+        object-fit: cover;
     }
 
     .section-6-title {
@@ -879,27 +1051,42 @@ body {
     .section-6-description, .accordion-content {
         font-size: 16px;
     }
+    .section-6-text {
+        text-align: left;
+        max-width: 311px;
+        width: 100%;
+    }
+    
 
     .section-6-button {
         font-size: 14px;
         padding: 16px 48px;
-        width: 240px;
+        width: 208px;
+    }
+    .accordion {
+        width: 311px;
     }
 }
 
 /* section 7 */
 
-/* Estilos generales de la sección 7 */
 .section-7 {
     background-color: #f2f2f2;
-    padding: 80px 0;
+    padding: 80px 88px 80px 88px;
     text-align: center;
+}
+
+.section-7-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .section-7-title {
     font-family: 'Lora', serif;
     font-weight: 700;
     font-size: 48px;
+    line-height: 57.6px;
     color: #000000;
     margin-bottom: 16px;
 }
@@ -908,6 +1095,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     font-size: 20px;
+    line-height: 30px;
     color: #363328;
     margin-bottom: 64px;
 }
@@ -937,14 +1125,16 @@ body {
     font-size: 14px;
     color: #565656;
     margin-bottom: 8px;
+    line-height: 21px;
 }
 
 .section-7-item-title {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 27px;
     color: #000000;
+    margin-bottom: 0;
 }
 
 .section-7-button {
@@ -962,54 +1152,52 @@ body {
     margin-top: 48px;
 }
 
-/* Estilos para mobile */
 @media (max-width: 768px) {
     .section-7 {
-        padding: 48px 0; /* Ajuste del padding */
+        padding: 48px 32px 48px 32px; 
     }
 
     .section-7-title {
         font-size: 33px;
+        font-weight: 600;
+        line-height: 39.6px;
     }
 
     .section-7-subtitle {
         font-size: 16px;
-        width: 85%;
-        left: 8%;
-        position: relative;
+        width: 100%;
+        font-weight: 400;
+        line-height: 24px;
+        margin-bottom: 40px;
     }
 
     .section-7-content {
         flex-direction: column;
         align-items: center;
-        gap: 24px;
+        gap: 40px;
     }
 
     .section-7-item {
         text-align: left;
-        width: 100%; /* Para asegurarse de que los items ocupen el ancho completo en móvil */
+        width: 100%;
     }
 
     .section-7-item-img {
         width: 311px;
         height: 191px;
-        left: 8.333%;
         position: relative;
     }
 
     .section-7-item-date {
         font-size: 12px;
-        width: 80%;
-        left: 8.33%;
-        position: relative;
+        line-height: 18px;
     }
     
 
     .section-7-item-title {
         font-size: 16px;
-        width: 85%;
-    left: 8.33%;
-    position: relative;
+        width: 100%;
+        line-height: 24px;
     }
 
     .section-7-button {
@@ -1021,39 +1209,50 @@ body {
 
 /* Section 8 */
 
-/* Estilos generales de la sección */
 .section-8 {
     background-color: #170864;
     background-image: url(https://thrillx.tecolotelocations.com.mx/images/s-8-bg.png);
     background-repeat: no-repeat;
     background-position: 0% 0%;
-    padding: 104px 10.51% 104px 10.51%; /* Padding vertical y horizontal */
+    padding: 104px 137px 104px 137px; 
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
 }
 
+.section-8-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
 .section-8-left {
     color: #ffffff;
-    max-width: 50%;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.section-8-left h1 {
+.section-8-left h5 {
     font-family: 'Lora', serif;
     font-weight: 600;
     font-size: 40px;
+    line-height: 48px;
     margin: 0;
+    width: 506px;
 }
 
 .section-8-left p {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
     margin: 16px 0 32px;
 }
 
@@ -1071,61 +1270,87 @@ body {
     justify-content: center;
     text-align: center;
     text-decoration: none;
+    padding:24px 56px 24px 56px;
 }
 
 .section-8-right {
     display: grid;
     grid-template-columns: repeat(4, 143.89px);
     grid-template-rows: repeat(3, 163.77px);
-    gap: 10px; /* Gap entre imágenes en mobile */
+    column-gap: 15.5px;
+    row-gap: 11.36px;
 }
 
-/* Estilos de las imágenes del mosaico */
 .section-8-right img {
     width: 143.89px;
     height: 163.77px;
     object-fit: cover;
 }
 
-/* Estilos específicos para mobile */
+@media (min-width: 769px) and (max-width:1439px) {
+    .section-8 {
+        flex-direction: column;
+        background-image: none; 
+    }
+    .section-8-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: contents;
+        justify-content: space-between;
+        gap: 70px;
+    }
+}
+
 @media (max-width: 768px) {
     .section-8 {
-        padding: 48px 8.33%;
+        padding: 48px 32px 48px 32px;
         flex-direction: column;
-        background-image: none; /* Quitar imagen de fondo en mobile */
+        background-image: none; 
+    }
+
+    .section-8-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
+        display: contents;
+        justify-content: space-between;
+        gap: 70px;
     }
 
     .section-8-left {
         align-items: flex-start;
         width: 311px;
-        max-width: 98%;
+        max-width: 100%;
         left: 0;
         padding-top: 32px;
         position: relative;
-        margin-bottom: 48px; /* Gap entre el contenido y el mosaico en mobile */
-        order: 2; /* Mueve el contenido al final en mobile */
+        order: 2; 
     }
 
-    .section-8-left h1 {
+    .section-8-left h5 {
         font-size: 27px;
+        width: 100%;
+        line-height: 32.4px;
     }
 
     .section-8-left p {
         font-size: 14px;
-        line-height: 150%;
+        line-height: 21px;
     }
 
-    .section-8-left .btn {
+    .section-8-left .button {
         width: 205px;
         height: 53px;
+        padding:16px 48px 16px 48px;
         font-size: 14px;
     }
 
     .section-8-right {
         grid-template-columns: repeat(4, 71px);
         grid-template-rows: repeat(3, 71px);
-        gap: 10px; /* Ajuste para el gap en mobile */
-        align-self: flex-start; /* Asegura que el mosaico esté arriba en mobile */
+        gap: 9px; 
+        align-self: flex-start; 
     }
 
     .section-8-right img {
@@ -1136,22 +1361,21 @@ body {
 
 /* Footer */
 
-/* Estilos generales del footer */
 .footer {
     background-color: #000000;
-    padding: 80px 0;
+    padding: 80px 120px 80px 120px;
     color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea las columnas al inicio del contenedor */
+    align-items: flex-start; 
     flex-wrap: wrap;
 }
 
 .footer-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 40px; /* Espacio entre columnas */
+    align-items: baseline;
+    margin: 0 40px; 
 }
 
 .footer-col img {
@@ -1177,21 +1401,20 @@ body {
 
 .footer-col ul li:not(:first-child) {
     font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 16px;
 }
 
-/* Estilos específicos para mobile */
 @media (max-width: 768px) {
     .footer {
-        padding: 48px 8.33%;
+        padding: 48px 32px 48px 32px;
         flex-direction: column;
-        align-items: flex-start; /* Alinea las columnas a la izquierda en móvil */
+        align-items: flex-start; 
     }
 
     .footer-col {
         margin: 0;
-        align-items: flex-start; /* Alinea el contenido de las columnas a la izquierda */
+        align-items: flex-start; 
         text-align: left;
         margin-bottom: 40px;
     }
@@ -1204,49 +1427,6 @@ body {
         margin-bottom: 12px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
